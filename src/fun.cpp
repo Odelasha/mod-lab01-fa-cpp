@@ -3,7 +3,7 @@
 #include "fun.h"
 
 unsigned int faStr1(const char* str) {
-    int count = 0;
+    unsigned int count = 0;
     for (size_t i = 0; str[i] != '\0'; ++i) {
         if (str[i] != ' ') {
             bool flag = true;
@@ -21,7 +21,7 @@ unsigned int faStr1(const char* str) {
 }
 
 unsigned int faStr2(const char* str) {
-    int count = 0;
+    unsigned int count = 0;
     for (size_t i = 0; str[i] != '\0'; ++i) {
         if (str[i] != ' ') {
             bool flag = true;
@@ -42,7 +42,7 @@ unsigned int faStr2(const char* str) {
 }
 
 unsigned int faStr3(const char* str) {
-    int count = 0;
+    unsigned int count = 0;
     float len = 0;
     for (size_t i = 0; str[i] != '\0'; ++i) {
         if (str[i] != ' ') {
