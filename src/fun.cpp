@@ -30,25 +30,28 @@ unsigned int faStr2(const char* str) {
         if (str[i] != ' ') {
             if (str[i] >= 'A' && str[i] <= 'Z' && !up && !low) {
                 up = true;
-            } else if (str[i] >= 'A' && str[i] <= 'Z' && up && !low) {
+            }
+            else if (str[i] >= 'A' && str[i] <= 'Z' && up && !low) {
                 low = true;
-            } else if ((str[i] < 'a' || str[i] > 'z') && up && !low) {
+            }
+            else if ((str[i] < 'a' || str[i] > 'z') && up && !low) {
                 low = true;
+            }
+            if (str[i] == ' ' && up && !low) {
+                up = false;
+                ++count;
+            }
+            if (str[i] == ' ' && up && low) {
+                up = false;
+                low = false;
+            }
+            ++i;
         }
-        if (str[i] == ' ' && up && !low) {
-            up = false;
+        if (up && !low) {
             ++count;
         }
-        if (str[i] == ' ' && up && low) {
-            up = false;
-            low = false;
-        }
-        ++i;
+        return count;
     }
-    if (up && !low) {
-        ++count;
-    }
-    return count;
 }
 
 unsigned int faStr3(const char* str) {
