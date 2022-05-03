@@ -30,11 +30,9 @@ unsigned int faStr2(const char* str) {
         if (str[i] != ' ') {
             if (str[i] >= 'A' && str[i] <= 'Z' && !up && !low) {
                 up = true;
-            }
-            else if (str[i] >= 'A' && str[i] <= 'Z' && up && !low) {
+            } else if (str[i] >= 'A' && str[i] <= 'Z' && up && !low) {
                 low = true;
-            }
-            else if ((str[i] < 'a' || str[i] > 'z') && up && !low) {
+            } else if ((str[i] < 'a' || str[i] > 'z') && up && !low) {
                 low = true;
             }
         }
