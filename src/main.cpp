@@ -1,7 +1,8 @@
 // Copyright 2022 UNN-IASR
-#include "fun.h"
 #include <iostream>
-using namespace std;
+#include "fun.h"
+using std::cout;
+using std::endl;
 
 int main() {
     cout << "Task 1" << endl;
@@ -23,4 +24,5 @@ int main() {
     cout << "Number of words for task 3: " << result3 << endl << endl;
     return 0;
 }
+
 

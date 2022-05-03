@@ -1,18 +1,14 @@
 // Copyright 2022 UNN-IASR
-#include "fun.h"
 #include "math.h"
+#include "fun.h"
 
-unsigned int faStr1(const char *str) {
+unsigned int faStr1(const char* str) {
     int count = 0;
-    for (size_t i = 0; str[i] != '\0'; ++i) 
-    {
-        if (str[i] != ' ')
-        {
+    for (size_t i = 0; str[i] != '\0'; ++i) {
+        if (str[i] != ' ') {
             bool flag = true;
-            while (str[i] != ' ' && str[i] != '\0')
-            {  
-                if (str[i] >= '0' && str[i] <= '9')
-                {
+            while (str[i] != ' ' && str[i] != '\0') {
+                if (str[i] >= '0' && str[i] <= '9') {
                     flag = false;
                 }
                 ++i;
@@ -24,21 +20,17 @@ unsigned int faStr1(const char *str) {
     return count;
 }
 
-unsigned int faStr2(const char *str) {
+unsigned int faStr2(const char* str) {
     int count = 0;
-    for (size_t i = 0; str[i] != '\0'; ++i)
-    {
-        if (str[i] != ' ')
-        {
+    for (size_t i = 0; str[i] != '\0'; ++i) {
+        if (str[i] != ' ') {
             bool flag = true;
-            if (str[i] < 'A' || str[i] > 'Z')
-            {
+            if (str[i] < 'A' || str[i] > 'Z') {
                 flag = false;
             }
             ++i;
-            while (str[i] != ' ' && str[i] != '\0')
-            {
-                if(str[i] < 'a' || str[i] > 'z')
+            while (str[i] != ' ' && str[i] != '\0') {
+                if (str[i] < 'a' || str[i] > 'z')
                     flag = false;
                 ++i;
             }
@@ -49,15 +41,12 @@ unsigned int faStr2(const char *str) {
     return count;
 }
 
-unsigned int faStr3(const char *str) {
+unsigned int faStr3(const char* str) {
     int count = 0;
     float len = 0;
-    for (size_t i = 0; str[i] != '\0'; ++i)
-    {
-        if (str[i] != ' ')
-        {
-            while (str[i] != ' ' && str[i] != '\0')
-            {
+    for (size_t i = 0; str[i] != '\0'; ++i) {
+        if (str[i] != ' ') {
+            while (str[i] != ' ' && str[i] != '\0') {
                 ++len;
                 ++i;
             }
@@ -66,4 +55,3 @@ unsigned int faStr3(const char *str) {
     }
     return (unsigned int)roundf(len / count);
 }
-
