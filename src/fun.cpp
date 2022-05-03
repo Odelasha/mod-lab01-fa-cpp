@@ -50,8 +50,8 @@ unsigned int faStr2(const char* str) {
         if (up && !low) {
             ++count;
         }
-        return count;
     }
+	return count;
 }
 
 unsigned int faStr3(const char* str) {
