@@ -13,8 +13,9 @@ unsigned int faStr1(const char* str) {
                 }
                 ++i;
             }
-            if (flag)
+            if (flag) {
                 ++count;
+            }
         }
     }
     return count;
@@ -30,12 +31,14 @@ unsigned int faStr2(const char* str) {
             }
             ++i;
             while (str[i] != ' ' && str[i] != '\0') {
-                if (str[i] < 'a' || str[i] > 'z')
+                if (str[i] < 'a' || str[i] > 'z') {
                     flag = false;
+                }
                 ++i;
             }
-            if (flag)
+            if (flag) {
                 ++count;
+            }
         }
     }
     return count;
@@ -55,3 +58,4 @@ unsigned int faStr3(const char* str) {
     }
     return (unsigned int)roundf(len / count);
 }
+
