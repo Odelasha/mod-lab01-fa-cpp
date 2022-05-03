@@ -23,14 +23,14 @@ unsigned int faStr1(const char* str) {
 
 unsigned int faStr2(const char* str) {
     unsigned int count = 0;
-    for (size_t i = 0; str[i] != '\0'; ++i) {
+    for (size_t i = 0; str[i] != 0; ++i) {
         if (str[i] != ' ') {
             bool flag = true;
             if (str[i] < 'A' || str[i] > 'Z') {
                 flag = false;
             }
             ++i;
-            while (str[i] != ' ' && str[i] != '\0') {
+            while (str[i] != ' ' && str[i] != 0) {
                 if (str[i] < 'a' || str[i] > 'z') {
                     flag = false;
                 }
